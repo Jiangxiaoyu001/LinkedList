@@ -33,13 +33,16 @@ typedef struct{
 
 class SingleLinkedList {
 public:
-	StaffInfomation * headerPointer, *currentPointer;
+	void StaffInfomation();
 	void helper();
 	void createLinkedList();
 	void collectStaffInfomation(StaffInfomation *);
 	void printStaffInfomation();
 	void destoryStaffInfomation();
-	void exitSystem();
+	void exitSystem()
+private:
+	StaffInfomation* headerPointer,
+                   * currentPointer;;
 };
 
 class DoubleLinkedList {
@@ -47,6 +50,11 @@ public:
 	void createLinkedList();
 };
 
+/* initialize member */
+SingleLinkedList::SingleLinkedList:
+	headerPointer(nullptr),
+	currentPointer(nullptr) {
+}
 
 void SingleLinkedList::helper()
 {
